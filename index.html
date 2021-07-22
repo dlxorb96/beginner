@@ -1,100 +1,31 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Everything about cooking eggs
-</title>
-<meta charset="utf-8">
-<style>
-  #active
-  {
-  color: blue;
-  }
-  .saw{
-    color: gray;
-  }
-  a {
-    color: black;
-    text-decoration: none;
-  }
-  h1 {
-    text-align: center;
-    font-size: 45px;
-  }
-</style>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WVSGC860VZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>투두리스트</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="clock.js" defer></script>
+    <script src="value.js" defer></script>
 
-  gtag('config', 'G-WVSGC860VZ');
-</script>
 </head>
 <body>
-<h1><a href="index.html" style= text-decoration: overline;" >계란요리의 모든 것</a></h1>
+    <h2 id="clock">00:00:00</h2>
 
-<ol>
-      <li><a href="1.html" class="saw">에그인헬</a></li>
-      <li><a href="2.html" class="saw" id="active">계란빵</a></li>
-      <li><a href="3.html">오믈렛</a></li>
-</ol>
-<!--
-<ol>
-  <li><a href="1.html"><font color="red">에그인헬</font></a></li>
-  <li><a href="2.html"><font color="red">계란빵</font></a></li>
-  <li><a href="3.html"><font color="red">오믈렛</font></a></li>
-</ol>
--->
-<p>
-  <iframe width="902" height="507"
-  src="https://www.youtube.com/embed/SlcnlWk4xdU"
-  frameborder="0" allow="accelerometer; autoplay;
-  clipboard-write; encrypted-media; gyroscope;
-  picture-in-picture" allowfullscreen></iframe>
-
-</p>
-<h2>계란</h2>
-  <p> <p style="margin-top:40px;"> 한국인은 2016년 기준으로 1인당 연간 약
-    268개(11~12kg)의 계란을 먹는다.[2] 1970년대에는 1인당 연간 4kg 수준을 소비하던 것에 비해 3배 이상으로 늘었다. 세계적으로
-    소비되는 계란은 매년 약 640억 kg 정도로, 이는 매년 약 1조 2천억 개 이상의
-    계란이 인간들의 뱃속에 들어간다는 뜻. 닭도 매년 500억 마리 이상 도축당하는데
-    계란 소비량은 그보다 더 많다고 볼 수 있다.
-</p>
-<img src="egg.png" width="50%">
-<p>
-  <div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://eggbeginner.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</p>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/60546348f7ce18270931bd4b/1f14q7lam';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+    <form id="nameForm" class="">
+        <input type="text" required id="input" maxlength="15"
+        placeholder="What's your name?">
+        <input type="submit" value="submit">
+        
+    </form>
+    <span id="name" class="hidden"></span>
+    <form id="toDoForm" class="hidden">
+        <input type="text" required id="todoForminput" maxlength="15"
+        placeholder="code your dream">
+        <input type="submit" value="submit">
+    </form>
+    <ul id="list">
+    </ul>
 </body>
 </html>

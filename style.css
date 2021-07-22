@@ -1,28 +1,25 @@
-a {
-    color: black;
-    text-decoration: none;
-  }
-  h1 {
-    text-align: center;
-    font-size: 45px;
-    border-bottom: solid 1px gray;
-    padding: 20px;
-    margin: 0%;
-  }
-  #grid ol{
-    border-right: solid 1px gray;
-    width: 100px;
-    padding: 25px;
-    padding-left: 30px;
-    margin: 0%;
-  }
-  body{
-    margin: 0%;
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-  #grid{
-    display: grid;
-    grid-template-columns: 150px 1fr;
-  }
-  #grid #article{
-    padding-left: 25px;
-  }
+
+/* 시계 꾸미기 */
+h2 {
+  font-size: 5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+span {
+  display: block;
+}
+
+li {
+  display: inline;
+}
